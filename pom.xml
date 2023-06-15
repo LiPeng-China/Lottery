@@ -11,10 +11,10 @@
     <modules>
         <module>lottery-application</module>
         <module>lottery-domain</module>
-        <module>lottery-interface</module>
         <module>lottery-infrastructure</module>
         <module>lottery-common</module>
         <module>lottery-rpc</module>
+        <module>lottery-interfaces</module>
     </modules>
 
     <properties>
@@ -50,11 +50,13 @@
             </dependency>
 
             <!-- MyBatis-->
+            <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>2.2.2</version>
             </dependency>
+
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
@@ -74,6 +76,7 @@
                 <scope>provided</scope>
                 <version>4.0.1</version>
             </dependency>
+
             <!--jstl标签库依赖模块-->
             <dependency>
                 <groupId>javax.servlet</groupId>
@@ -104,13 +107,19 @@
                 <version>3.8</version>
             </dependency>
             <!-- https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream -->
+<!--            <dependency>-->
+<!--                <groupId>com.thoughtworks.xstream</groupId>-->
+<!--                <artifactId>xstream</artifactId>-->
+<!--                <version>1.4.10</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>com.thoughtworks.xstream</groupId>
                 <artifactId>xstream</artifactId>
-                <version>1.4.10</version>
+                <version>1.4.20</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
+
 
     <build>
         <finalName>Lottery</finalName>

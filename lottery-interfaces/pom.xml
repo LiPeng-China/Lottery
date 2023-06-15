@@ -9,14 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>lottery-interface</artifactId>
-
-    <packaging>war</packaging>
+    <artifactId>lottery-interfaces</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
+    <packaging>war</packaging>
 
     <dependencies>
         <dependency>
@@ -36,7 +36,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.30</version>
+            <version>5.1.34</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -64,8 +64,6 @@
             <artifactId>dubbo-spring-boot-starter</artifactId>
             <version>2.7.1</version>
         </dependency>
-
-        <!--进入其他包-->
         <dependency>
             <groupId>com.taiyi</groupId>
             <artifactId>lottery-infrastructure</artifactId>
@@ -76,8 +74,6 @@
             <artifactId>lottery-rpc</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
-
     </dependencies>
 
     <build>
@@ -113,7 +109,16 @@
                     <target>8</target>
                 </configuration>
             </plugin>
+            <!--防止maven install 报错：webxml attribute is required (or pre-existing WEB-INF/web.xml if executing in update mode)-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
-
 </project>
