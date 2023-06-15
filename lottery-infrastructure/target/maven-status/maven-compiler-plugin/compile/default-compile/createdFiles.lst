@@ -1,0 +1,2 @@
+com\taiyi\lottery\infrastructure\entity\Activity.class
+com\taiyi\lottery\infrastructure\dao\IActivityDao.class

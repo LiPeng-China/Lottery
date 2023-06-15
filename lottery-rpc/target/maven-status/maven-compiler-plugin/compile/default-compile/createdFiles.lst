@@ -1,0 +1,4 @@
+com\taiyi\lottery\rpc\req\ActivityReq.class
+com\taiyi\lottery\rpc\res\ActivityRes.class
+com\taiyi\lottery\rpc\dto\ActivityDto.class
+com\taiyi\lottery\rpc\IActivityBooth.class

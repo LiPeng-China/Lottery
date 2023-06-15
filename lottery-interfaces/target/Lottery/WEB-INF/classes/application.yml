@@ -1,0 +1,27 @@
+server:
+        port: 8080
+# MySQL 数据库的相关配置文件信息
+spring:
+  datasource:
+  username: root
+  password: 123456
+  url: jdbc:mysql://172.18.230.171:3306/lottery?useUnicode=true&serverTimezone=Asia/Shanghai
+  driver-class-name: com.mysql.cj.jdbc.Driver
+
+# MyBatis
+mybatis:
+  mapper-locations: classpath:/mybatis/mapper/*.xml
+  config-location: classpath:/mybatis/config/mybatis-config.xml
+
+# Dubbo 广播方式配置
+dubbo:
+  application:
+    name: Lottery
+    version: 1.0.0
+  registry:
+    address: N/A
+  protocol:
+    name: dubbo
+    port: 20880
+  scan:
+    base-packages: com.taiyi.lottery.rpc
